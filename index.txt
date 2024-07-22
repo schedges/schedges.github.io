@@ -134,18 +134,16 @@ WordPress
 
 # portfolio
 
-Portfolio
+Research
 
-All
-Web design
-Applications
-Web development
+COHERENT
+nEXO
+ANCF
 
 Select category
-All
-Web design
-Applications
-Web development
+COHERENT
+nEXO
+ANCF
 
 alt = finance
 Finance
