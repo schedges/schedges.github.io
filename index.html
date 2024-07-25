@@ -5,144 +5,96 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Samuel Hedges - Personal Portfolio</title>
+  <title>Samuel Hedges' Personal Website</title>
 
-  <!--
-    - favicon
-  -->
-  <link rel="shortcut icon" href="./assets/images/logo.png" type="image/x-icon">
-
-  <!--
-    - custom css link
-  -->
+  <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
   <link rel="stylesheet" href="./assets/css/style.css">
-
-  <!--
-    - google font link
-  -->
+  <!--Load preferred these fonts, fallbacks are defined in the .css file-->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
-
-  <!--
-    - #MAIN
-  -->
-
   <main>
-
-    <!--
-      - #SIDEBAR
-    -->
-
+    <!--#SIDEBAR-->
     <aside class="sidebar" data-sidebar>
-
       <div class="sidebar-info">
-
         <figure class="avatar-box">
-          <img src="./assets/images/my-avatar.png" alt="Richard hanrick" width="80">
+          <img src="./assets/images/my-avatar.png" alt="Sam Hedges" class="avatar" width="80" >
         </figure>
-
         <div class="info-content">
           <h1 class="name" title="Samuel Hedges">Samuel Hedges</h1>
-
-          <p class="title">Neutrino Physicist</p>
+          <div class="titles-container">
+              <p class="title">Postdoc</p>
+              <p class="title">Neutrino Physics</p>
+              <p class="title">Nuclear Physics</p>
+              <p class="title">Astrophysics</p>
+          </div>
+          <button class="info_more-btn"></button>
         </div>
-
         <button class="info_more-btn" data-sidebar-btn>
-          <span>Show Contacts</span>
-
+          <span>More Info</span>
           <ion-icon name="chevron-down"></ion-icon>
         </button>
-
       </div>
-
       <div class="sidebar-info_more">
-
         <div class="separator"></div>
-
         <ul class="contacts-list">
-
           <li class="contact-item">
-
             <div class="icon-box">
               <ion-icon name="mail-outline"></ion-icon>
             </div>
-
             <div class="contact-info">
               <p class="contact-title">Email</p>
-
               <a href="mailto:samchedges@gmail dot com" class="contact-link">samchedges@gmail dot com</a>
             </div>
-
           </li>
-
           <li class="contact-item">
-
             <div class="icon-box">
               <ion-icon name="location-outline"></ion-icon>
             </div>
-
             <div class="contact-info">
               <p class="contact-title">Location</p>
-
               <address>Livermore, California, USA</address>
             </div>
-
           </li>
-
         </ul>
-
         <div class="separator"></div>
-
         <ul class="social-list">
-
           <li class="social-item">
-            <a href="#" class="social-link">
-              <ion-icon name="logo-facebook"></ion-icon>
+            <a href="https://github.com/schedges" class="social-link">
+              <ion-icon name="logo-github"></ion-icon>
             </a>
           </li>
-
           <li class="social-item">
-            <a href="#" class="social-link">
-              <ion-icon name="logo-twitter"></ion-icon>
+            <a href="https://linkedin.com/in/schedges" class="social-link">
+              <ion-icon name="logo-linkedin"></ion-icon>
             </a>
           </li>
-
-          <li class="social-item">
-            <a href="#" class="social-link">
-              <ion-icon name="logo-instagram"></ion-icon>
-            </a>
-          </li>
-
+        </li>
+        <li class="social-item">
+          <a href="https://scholar.google.com/citations?user=rA5XXdEAAAAJ" class="social-link">
+            <ion-icon name="logo-google"></ion-icon>
+          </a>
+        </li>
         </ul>
-
       </div>
-
     </aside>
 
 
-
-
-
-    <!--
-      - #main-content
-    -->
+    <!--#main-content-->
 
     <div class="main-content">
 
-      <!--
-        - #NAVBAR
-      -->
+      <!--#NAVBAR-->
 
       <nav class="navbar">
 
         <ul class="navbar-list">
 
           <li class="navbar-item">
-            <button class="navbar-link  active" data-nav-link>About</button>
+            <button class="navbar-link active" data-nav-link>About</button>
           </li>
 
           <li class="navbar-item">
@@ -169,7 +121,7 @@
         - #ABOUT
       -->
 
-      <article class="about  active" data-page="about">
+      <article class="about active" data-page="about">
 
         <header>
           <h2 class="h2 article-title">About me</h2>
@@ -177,7 +129,24 @@
 
         <section class="about-text">
           <p>
-            I'm a neutrino physicist.
+            I'm an experimental particle physicist primarily interested in neutrino physics, nuclear physics, and detection technology.
+            <br><br>
+            My research focuses on understanding low-energy neutrino-nuclear interactions, which are crucial for probing the physics 
+            of naturally occurring neutrino sources. This research not only sheds light on the elusive nature of neutrinos but also 
+            has implications for our broader understanding of particle physics and the universe in which we live.
+            <br><br>
+            I currently work at Lawrence Livermore National Laboratory where I'm conducting R&D research for the nEXO experiment. nEXO
+            is aiming to search for the process of neutrinoless double-beta decay of <sup>136</sup>Xe with unprecedented sensitivity,
+            to test whether the neutrino is its own antiparticle.
+            <br><br>
+            Prior to LLNL, I earned a Ph.D. from Duke University working on the COHERENT experiment and the Advanced Neutron Calibration Facility 
+            (ANCF). My work on COHERENT helped lead to the world's first observation of coherent elastic neutrino-nucleus scattering, a process predicted by the Standard Model that escaped detection for more than
+            40 years. As part of ANCF, I helped to characterize neutrino and WIMP dark matter detectors to low-energy nuclear recoils
+            using the Tandem van de Graff generator at the Triangle Universities Nuclear Laboratory.
+            <br><br>
+            Feel free to reach out to me at for potential collaborations or if you have any questions about my research.
+            <br><br>
+            <a href="https://github.com/codewithsadee/vcard-personal-portfolio">This website is based off the vcard-personal-portfolio github project.</a>
           </p>
         </section>
 
@@ -197,121 +166,84 @@
           <h2 class="h2 article-title">Resume</h2>
         </header>
 
+        <!--Education-->
         <section class="timeline">
-
           <div class="title-wrapper">
             <div class="icon-box">
               <ion-icon name="book-outline"></ion-icon>
             </div>
-
             <h3 class="h3">Education</h3>
           </div>
-
+          
           <ol class="timeline-list">
 
             <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">University school of the arts</h4>
-
-              <span>2007 — 2008</span>
-
+              <h4 class="h4 timeline-item-title">Duke University</h4>
+              <span>2015 — 2022</span>
               <p class="timeline-text">
-                Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et
-                quas molestias
-                exceptur.
+                COHERENT, ANCF
               </p>
-
             </li>
 
             <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">New york academy of art</h4>
-
-              <span>2006 — 2007</span>
-
+              <h4 class="h4 timeline-item-title">California State Academy, Long Beacn</h4>
+              <span>2012 — 2015</span>
               <p class="timeline-text">
-                Ratione voluptatem sequi nesciunt, facere quisquams facere menda ossimus, omnis voluptas assumenda est
-                omnis..
+                Josephson Junctions. TA/GA
               </p>
-
             </li>
 
             <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">High school of art and design</h4>
-
-              <span>2002 — 2004</span>
-
+              <h4 class="h4 timeline-item-title">University of Puget Sound</h4>
+              <span>2007 — 2011</span>
               <p class="timeline-text">
-                Duis aute irure dolor in reprehenderit in voluptate, quila voluptas mag odit aut fugit, sed consequuntur
-                magni dolores
-                eos.
+                here
               </p>
-
             </li>
-
           </ol>
-
         </section>
 
+        <!---Research Experience-->
         <section class="timeline">
-
           <div class="title-wrapper">
             <div class="icon-box">
               <ion-icon name="book-outline"></ion-icon>
             </div>
-
-            <h3 class="h3">Experience</h3>
+            <h3 class="h3">Other Research Experience</h3>
           </div>
-
           <ol class="timeline-list">
-
             <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Creative director</h4>
-
-              <span>2015 — Present</span>
-
+              <h4 class="h4 timeline-item-title">Postdoctoral Researcher, nEXO Experiment</h4>
+              <span>2021 — Present</span>
               <p class="timeline-text">
-                Nemo enim ipsam voluptatem blanditiis praesentium voluptum delenit atque corrupti, quos dolores et qvuas
-                molestias
-                exceptur.
+                here
               </p>
-
             </li>
-
             <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Art director</h4>
-
-              <span>2013 — 2015</span>
-
+              <h4 class="h4 timeline-item-title">Summer Intern, COHERENT experiment</h4>
+              <span>2016</span>
               <p class="timeline-text">
-                Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et
-                quas molestias
-                exceptur.
+                MARS
               </p>
-
             </li>
-
             <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Web designer</h4>
-
-              <span>2010 — 2013</span>
-
+              <h4 class="h4 timeline-item-title">Student Internship Research (SIRI), JPL</h4>
+              <span>2014 — 2015</span>
               <p class="timeline-text">
-                Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et
-                quas molestias
-                exceptur.
+                MARS
               </p>
-
             </li>
-
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Student Undergraduate Laboratory Internship (SULI), LBNL</h4>
+              <span>2012</span>
+              <p class="timeline-text">
+                BRAN
+              </p>
+            </li>
           </ol>
 
         </section>
-
+        <!--Skills-->
         <section class="skill">
 
           <h3 class="h3 skills-title">My skills</h3>
@@ -319,55 +251,53 @@
           <ul class="skills-list content-card">
 
             <li class="skills-item">
-
               <div class="title-wrapper">
-                <h5 class="h5">Web design</h5>
-                <data value="80">80%</data>
+                <h5 class="h5">MCNP</h5>
+                <data value="80"></data>
               </div>
-
               <div class="skill-progress-bg">
                 <div class="skill-progress-fill" style="width: 80%;"></div>
               </div>
-
             </li>
 
             <li class="skills-item">
-
               <div class="title-wrapper">
-                <h5 class="h5">Graphic design</h5>
-                <data value="70">70%</data>
+                <h5 class="h5">Python</h5>
+                <data value="85"></data>
               </div>
-
               <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 70%;"></div>
+                <div class="skill-progress-fill" style="width: 85%;"></div>
               </div>
-
             </li>
 
             <li class="skills-item">
-
               <div class="title-wrapper">
-                <h5 class="h5">Branding</h5>
-                <data value="90">90%</data>
+                <h5 class="h5">C++</h5>
+                <data value="60"></data>
               </div>
-
               <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 90%;"></div>
+                <div class="skill-progress-fill" style="width: 60%;"></div>
               </div>
-
             </li>
 
             <li class="skills-item">
-
               <div class="title-wrapper">
-                <h5 class="h5">WordPress</h5>
-                <data value="50">50%</data>
+                <h5 class="h5">GEANT4</h5>
+                <data value="20"></data>
               </div>
-
               <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 50%;"></div>
+                <div class="skill-progress-fill" style="width: 20%;"></div>
               </div>
+            </li>
 
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">VHDL</h5>
+                <data value="10"></data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 10%;"></div>
+              </div>
             </li>
 
           </ul>
@@ -395,7 +325,7 @@
           <ul class="filter-list">
 
             <li class="filter-item">
-              <button class="active" data-filter-btn>All</button>
+              <button class="active" data-filter-btn>General</button>
             </li>
 
             <li class="filter-item">
@@ -487,170 +417,50 @@
           <ul class="blog-posts-list">
 
             <li class="blog-post-item">
-              <a href="#">
-
+              <a href="https://arxiv.org/abs/2405.19419">
                 <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-1.jpg" alt="Design conferences in 2022" loading="lazy">
+                  <img src="./assets/images/blog/2024/20240529.png" alt="Neutrino-Xe Paper Plot" loading="lazy">
                 </figure>
-
                 <div class="blog-content">
-
                   <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
+                    <p class="publication"></p>
                     <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                    <time datetime="2024-05-29">May 29, 2024</time>
                   </div>
-
-                  <h3 class="h3 blog-item-title">Design conferences in 2022</h3>
-
+                  <h3 class="h3 blog-item-title">nEXO supernova paper submitted to arXiv</h3>
                   <p class="blog-text">
-                    Veritatis et quasi architecto beatae vitae dicta sunt, explicabo.
+                    A nEXO paper studying supernova electron-neutrino charged-current interactions with xenon was recently submitted 
+                    to arXiv. This paper provides in-depth modeling of electron-neutrino charged-current interactions with xenon at 
+                    supernova neutrino energies. Although nEXO's total mass is only ~5-tonnes, it has the potential to observe supernova
+                    neutrinos from hundreds of nearby candidate stars. Our modeling combines experimental and theoretical Gamow-Teller 
+                    strength distributions to predict inclusive and exclusive cross sections, as well as the particles produces from 
+                    these interactions. We simulated these particles in the nEXO detector, ran the output through a sample reconstruction
+                    algorithm, and calculate nEXO's reconstruction efficiency, as well as develop a transfer matrix mapping incident 
+                    neutrino energy to reconstructed observed energy in nEXO.
                   </p>
-
                 </div>
-
               </a>
             </li>
 
             <li class="blog-post-item">
-              <a href="#">
-
+              <a href="https://www.llnl.gov/article/51176/lab-scientist-wins-springer-thesis-award-work-neutrino-research">
                 <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-2.jpg" alt="Best fonts every designer" loading="lazy">
+                  <img src="./assets/images/blog/2024/20240502.jpg" alt="Picture of me in the LXTS" loading="lazy">
                 </figure>
-
                 <div class="blog-content">
-
                   <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
+                    <p class="publication"></p>
                     <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                    <time datetime="2024-05-29">May 2, 2024</time>
                   </div>
-
-                  <h3 class="h3 blog-item-title">Best fonts every designer</h3>
-
+                  <h3 class="h3 blog-item-title">Springer Thesis Award!</h3>
                   <p class="blog-text">
-                    Sed ut perspiciatis, nam libero tempore, cum soluta nobis est eligendi.
+                    My thesis was selected for the Springer Thesis Award! It will be published in a book, and gives me a chance to go
+                    back and fix some of the annoying typos from my thesis I noticed after the fact. My thesis was on low-energy 
+                    neutrino-nucleus interactions studied at the Spallation Neutron Source, including inelastic neutrino-nucleus scattering
+                    on lead, iron, and iodine, along with preliminary work toward COHERENT's tonne-scale NaIvE detector.
                   </p>
-
                 </div>
-
-              </a>
-            </li>
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-3.jpg" alt="Design digest #80" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Design digest #80</h3>
-
-                  <p class="blog-text">
-                    Excepteur sint occaecat cupidatat no proident, quis nostrum exercitationem ullam corporis suscipit.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-4.jpg" alt="UI interactions of the week" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">UI interactions of the week</h3>
-
-                  <p class="blog-text">
-                    Enim ad minim veniam, consectetur adipiscing elit, quis nostrud exercitation ullamco laboris nisi.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-5.jpg" alt="The forgotten art of spacing" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">The forgotten art of spacing</h3>
-
-                  <p class="blog-text">
-                    Maxime placeat, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-6.jpg" alt="Design digest #79" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Design digest #79</h3>
-
-                  <p class="blog-text">
-                    Optio cumque nihil impedit uo minus quod maxime placeat, velit esse cillum.
-                  </p>
-
-                </div>
-
               </a>
             </li>
 

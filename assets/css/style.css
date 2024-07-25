@@ -127,7 +127,7 @@
 
 a { text-decoration: none; }
 
-li { list-style: none; }
+li { list-style: none; display: inline; }
 
 img, ion-icon, a, button, time, span { display: block; }
 
@@ -316,7 +316,7 @@ main {
 
 .sidebar {
   margin-bottom: 15px;
-  max-height: 112px;
+  max-height: 125px;
   overflow: hidden;
   transition: var(--transition-2);
 }
@@ -335,23 +335,45 @@ main {
   background: var(--bg-gradient-onyx);
   border-radius: 20px;
 }
+/* Container for titles to handle flex layout */
+.info-content {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center;    /* Center items horizontally */
+  gap: 10px;              /* Space between .name and titles */
+}
 
+/* Ensure .name takes full width and is centered */
 .info-content .name {
   color: var(--white-2);
   font-size: var(--fs-3);
   font-weight: var(--fw-500);
   letter-spacing: -0.25px;
-  margin-bottom: 10px;
+  margin-bottom: 10px;   /* Space between name and titles */
+  text-align: center;    /* Center the text */
 }
 
+/* Flexbox for titles (add a container for better control) */
+.titles-container {
+  display: flex;
+  flex-wrap: wrap;       /* Allow titles to wrap */
+  gap: 10px;             /* Space between titles */
+  justify-content: center; /* Center titles horizontally */
+  
+}
+
+/* Title styles */
 .info-content .title {
   color: var(--white-1);
   background: var(--onyx);
   font-size: var(--fs-8);
   font-weight: var(--fw-300);
-  width: max-content;
   padding: 3px 12px;
   border-radius: 8px;
+  margin: 0;             /* Remove margin */
+  white-space: nowrap;   /* Prevent wrapping of title text */
+  /* Remove default padding */
+  box-sizing: border-box;
 }
 
 .info_more-btn {
@@ -1322,7 +1344,15 @@ textarea.form-input::-webkit-resizer { display: none; }
     margin-bottom: 100px;
   }
 
-
+  /**
+  * Avatar
+  */
+  .avatar {
+      border-radius: 20%;  /* Makes the image circular */
+      width: 140px;         /* Set the width of the image */
+      height: 140px;        /* Set the height to be the same as width for a perfect circle */
+      object-fit: cover;   /* Ensures the image covers the container, cropping as needed */
+  }
 
   /**
    * #SIDEBAR
@@ -1837,14 +1867,27 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .avatar-box img { width: 150px; }
 
-  .info-content .name {
-    white-space: nowrap;
-    text-align: center;
+  .info-content {
+    display: flex;       /* Use flexbox layout */
+    flex-wrap: wrap;     /* Allow items to wrap onto multiple lines if needed */
+    gap: 10px;           /* Add space between items */
+    justify-content: center; /* Center items horizontally */
   }
 
-  .info-content .title { margin: auto; }
+  .info-content .name {
+      white-space: nowrap;
+      text-align: center;
+      margin: 0;           /* Remove default margin */
+  }
 
-  .info_more-btn { display: none; }
+  .info-content .title {
+      margin: 0;           /* Remove default margin */
+      padding: 0;          /* Remove default padding */
+  }
+
+  .info_more-btn {
+      display: none;       /* Hide the button (unchanged) */
+  }
 
   .sidebar-info_more {
     opacity: 1;
