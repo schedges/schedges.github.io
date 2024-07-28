@@ -104,6 +104,10 @@
           <li class="navbar-item">
             <button class="navbar-link" data-nav-link>Research</button>
           </li>
+          
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Publications</button>
+          </li>
 
           <li class="navbar-item">
             <button class="navbar-link" data-nav-link>Blog</button>
@@ -362,92 +366,93 @@
         - #Experiments
       -->
 
-      <article class="research" data-page="research">
+      <article class="portfolio" data-page="research">
 
         <header>
           <h2 class="h2 article-title">Research</h2>
         </header>
-
-        <section class="research">
-
-          <ul class="filter-list">
-
-            <li class="filter-item">
-              <button class="active" data-filter-btn>General</button>
+        <ul class="nav-list">
+          <li class="nav-item">
+            <button class="active" data-nav-btn="general">General</button>
+          </li>
+          <li class="nav-item">
+            <button data-nav-btn="coherent">COHERENT</button>
+          </li>
+          <li class="nav-item">
+            <button data-nav-btn="nexo">nEXO</button>
+          </li>
+          <li class="nav-item">
+            <button data-nav-btn="ancf">ANCF</button>
+          </li>
+        </ul>
+        
+        <div class="nav-select-box">
+          <button class="nav-select" data-select>
+            <div class="select-value" data-select-value>Select area</div>
+            <div class="select-icon">
+              <ion-icon name="chevron-down"></ion-icon>
+            </div>
+          </button>
+          <ul class="select-list">
+            <li class="select-item">
+              <button data-select-item="general">General</button>
             </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>COHERENT</button>
+            <li class="select-item">
+              <button data-select-item="coherent">COHERENT</button>
             </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>nEXO</button>
+            <li class="select-item">
+              <button data-select-item="nexo">nEXO</button>
             </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>ANCF</button>
+            <li class="select-item">
+              <button data-select-item="ancf">ANCF</button>
             </li>
-
           </ul>
+        </div>
+        
+        <ul class="project-list">
+          <li class="project-item" data-content="general">
+            There are many interesting neutrino sources that produce almost exclusively low-energy (&lt; 100 MeV) neutrinos. This includes nuclear fusion inside the run, radioactive decay of elements in the Earth's crust,
+            fissions occuring inside nuclear reactors, and core-collapse supernovae. By studying the neutrinos these sources produce, we can learn about the processes that generated them, including information which can be unavailable through other channels.<br><br>  
+            
+            The traditional way we have studied these neutrinos is through their interactions with simple particles,such as proton (through inverse beta decay) or electrons (through elastic neutrino-electron scattering). IBD is only sensitive to electron anti-neutrinos with energy &gt; 1.8 MeV, and while neutrino-electron scattering is near-thresholdless, typical detectors look at cherenkov signals from the electrons, which requires the electron to be have energy greater than ~700 keV. Neutrino-electron scattering also cannot distinguish between different flavors of scattering neutrinos.
 
-          <div class="filter-select-box">
 
-            <button class="filter-select" data-select>
-
-              <div class="select-value" data-selecct-value>Select category</div>
-
-              <div class="select-icon">
-                <ion-icon name="chevron-down"></ion-icon>
-              </div>
-
-            </button>
-
-            <ul class="select-list">
-
-              <li class="select-item">
-                <button data-select-item>COHERENT</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>nEXO</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>ANCF</button>
-              </li>
-
-            </ul>
-
-          </div>
-
-          <ul class="project-list">
-
-            <li class="project-item  active" data-filter-item data-category="COHERENT">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-1.jpg" alt="COHERENT logo" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">COHERENT</h3>
-
-                <p class="project-category">COHERENT</p>
-
-              </a>
-            </li>
-
-          </ul>
-
+          </li>
+          <li class="project-item" data-content="coherent">
+            COHERENT is studying coherent elastic neutrino-nucleus scattering (CEvNS) at the Spallation Neutron Source (SNS) at Oak Ridge National Laboratory (ORNL)
+          </li>
+          <li class="project-item" data-content="nexo">
+            nEXO is seeking for neutrinoless double-beta decay (0vBB) of <sup>136</sup>Xe using 5-tonnes of enriched liquid xenon.
+          </li>
+          <li class="project-item" data-content="ancf">
+            At the Advanced Neutron Calibration Facility (ANCF) at Triangle Universities Nuclear Laboratory (TUNL), detectors' response to low-energy nuclear recoils is characterized, which is relevant for both CEvNS and WIMP dark-matter scattering.
+          </li>
+        </ul>
         </section>
 
       </article>
 
-
-
+      <article class="about" data-page="publications">
+        <header>
+          <h2 class="h2 article-title">Publications</h2>
+        </header>
+        <h3 class="h3">2024</h3>
+      
+        <ul class="publication-list">
+          <li class="publication-item">
+            M. Yvaine, et al., "Imaging of single barium atoms in a second matrix site in solid xenon for barium tagging in a <sup>136</sup>Xe double beta decay experiment" (2024). 
+            <a href="https://arxiv.org/abs/2407.00285">arXiv:2407.00285</a>
+          </li><br>
+          <li class="publication-item">
+            S. Adamski, et al., "First detection of coherent elastic neutrino-nucleus scattering on germanium" (2024). 
+            <a href="https://arxiv.org/abs/2406.13806">arXiv:2406.13806</a>
+          </li><br>
+          <li class="publication-item">
+            S. Hedges, et al., "Supernova Electron-Neutrino Interactions with Xenon in the nEXO Detector" (2024). 
+            <a href="https://arxiv.org/abs/2405.19419">arXiv:2405.19419</a>
+          </li>
+        </ul>
+      </article>
 
 
       <!--
@@ -524,17 +529,6 @@
 
   </main>
 
-
-
-      <article class="publications" data-page="publications">
-
-        <header>
-          <h2 class="h2 article-title">Publications</h2>
-        </header>
-
-        </section>
-
-      </article>
 
   <!--
     - custom js link
