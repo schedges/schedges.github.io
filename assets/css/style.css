@@ -890,46 +890,60 @@ main {
   /**
   Publications
   */
-  .publication-list {
-    color: var(--light-gray);
-    font-size: var(--fs-6);
-    font-weight: var(--fw-300);
-    line-height: 1.6;
-    list-style-type: none; /* Ensures bullets are displayed */
-    padding-left: 20px; /* Ensure enough space for bullets */
-    margin: 20px; /* Reset margin */
-  }
-  
+/**
+Publications
+*/
+.publication-list {
+  color: var(--light-gray);
+  font-size: var(--fs-6);
+  font-weight: var(--fw-300);
+  line-height: 1.6;
+  list-style-type: none; /* No default bullets */
+  padding-left: 20px; /* Space for custom bullets */
+  margin: 20px; /* Space around the list */
+}
+
+.publication-item {
+  padding-left: 30px; /* Ensure space for bullets and text */
+  margin-bottom: 10px; /* Space between list items */
+  color: var(--light-gray);
+  font-weight: var(--fw-300);
+  line-height: 1.5;
+  position: relative;
+}
+
+.publication-item::before {
+  content: "•"; /* Custom bullet */
+  color: var(--light-gray);
+  position: absolute;
+  left: 10px; /* Adjust bullet position */
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.publication-item a {
+  color: var(--orange-yellow-crayola); /* Optional: Set link color */
+  text-decoration: underline; /* Optional: Ensure links are visible */
+  display: inline;  
+}
+
+.publication-text {
+  color: var(--light-gray);
+  font-weight: var(--fw-300);
+  line-height: 1.5;
+  margin-left: 0; /* No extra margin needed */
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
   .publication-item {
-    padding-left: 20px; /* Space between list items */
-    margin-bottom: 10px; /* Space between list items */
-    color: var(--light-gray);
-    font-weight: var(--fw-300);
-    line-height: 1.5;
-    position: relative;
+    padding-left: 20px; /* Reduce padding on smaller screens */
   }
   
   .publication-item::before {
-    content: "•"; /* Display bullet */
-    color: var(--light-gray);
-    position: absolute;
-    left: 0; /* Align bullet with the start of the item */
-    top: 50%;
-    transform: translateY(-50%);
+    left: 5px; /* Adjust bullet position on smaller screens */
   }
-  
-  .publication-item a {
-    color: var(--orange-yellow-crayola); /* Optional: Set link color */
-    text-decoration: underline; /* Optional: Ensure links are visible */
-    display: inline;  
-  }
-  
-  .publication-text {
-    color: var(--light-gray);
-    font-weight: var(--fw-300);
-    line-height: 1.5;
-    margin-left: 20px;
-  }
+}
 
 /*-----------------------------------*\
   #PORTFOLIO
