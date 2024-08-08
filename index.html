@@ -537,9 +537,9 @@
           </ul>
 
           <div class="pagination" style="text-align: center;">
-            <button id="first" onclick="changePage('first')" style="display: none; color: vegasgold;">First</button>
-            <button id="prev" onclick="changePage('prev')" style="display: none; color: vegasgold;">Previous</button>
-            <button id="next" onclick="changePage('next')" style="color: vegasgold;">Next</button>
+            <button id="first" onclick="changePage('first')" style="display: none;">First</button>
+            <button id="prev" onclick="changePage('prev')" style="display: none;">Previous</button>
+            <button id="next" onclick="changePage('next')">Next</button>
           </div>
 
           <style>
@@ -561,7 +561,7 @@
           <script>
             let posts = [];
             let currentPage = 1;
-            const postsPerPage = 10;
+            const postsPerPage = 6;
 
             async function loadBlogPosts() {
               try {
@@ -593,7 +593,7 @@
               // Update button states
               document.getElementById('prev').style.display = currentPage === 1 ? 'none' : 'inline-block';
               document.getElementById('first').style.display = currentPage === 1 ? 'none' : 'inline-block';
-              document.getElementById('next').disabled = end >= posts.length;
+              document.getElementById('next').style.display = end < posts.length ? 'inline-block' : 'none'; // Show or hide "Next"
             }
 
             function changePage(action) {
@@ -612,7 +612,6 @@
           </script>
         </section>
       </article>
-
 
 
     </div>
