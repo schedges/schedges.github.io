@@ -561,7 +561,7 @@
           <script>
             let posts = [];
             let currentPage = 1;
-            const postsPerPage = 6;
+            const postsPerPage = 10;
 
             async function loadBlogPosts() {
               try {
@@ -605,7 +605,7 @@
                 currentPage = 1;
               }
               displayPosts();
-              scrollToTop(); // Scroll to the top after changing the page
+              setTimeout(scrollToTop, 100); // Delay scroll to allow content to render
             }
 
             function scrollToTop() {
