@@ -537,15 +537,31 @@
           </ul>
 
           <div class="pagination" style="text-align: center;">
-            <button id="first" onclick="changePage('first')" style="display: none;">First</button>
-            <button id="prev" onclick="changePage('prev')" style="display: none;">Previous</button>
-            <button id="next" onclick="changePage('next')">Next</button>
+            <button id="first" onclick="changePage('first')" style="display: none; color: vegasgold;">First</button>
+            <button id="prev" onclick="changePage('prev')" style="display: none; color: vegasgold;">Previous</button>
+            <button id="next" onclick="changePage('next')" style="color: vegasgold;">Next</button>
           </div>
+
+          <style>
+            .pagination button {
+              background: none;
+              border: none;
+              cursor: pointer;
+              font-size: 16px; /* Adjust font size as needed */
+              color: vegasgold; /* Set the button color */
+              margin: 0 10px; /* Add some spacing between buttons */
+            }
+
+            .pagination button:disabled {
+              color: gray; /* Change color for disabled buttons */
+              cursor: not-allowed; /* Change cursor for disabled buttons */
+            }
+          </style>
 
           <script>
             let posts = [];
             let currentPage = 1;
-            const postsPerPage = 6;
+            const postsPerPage = 10;
 
             async function loadBlogPosts() {
               try {
