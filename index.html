@@ -605,6 +605,11 @@
                 currentPage = 1;
               }
               displayPosts();
+              scrollToTop(); // Scroll to the top after changing the page
+            }
+
+            function scrollToTop() {
+              window.scrollTo({ top: 0, behavior: 'smooth' }); // Smooth scroll to the top
             }
 
             // Call the function to load the blog posts
