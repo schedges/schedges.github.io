@@ -536,16 +536,16 @@
             <!-- Blog posts will be loaded here -->
           </ul>
 
-          <div class="pagination">
-            <button id="first" onclick="changePage('first')">First</button>
-            <button id="prev" onclick="changePage('prev')">Previous</button>
+          <div class="pagination" style="text-align: center;">
+            <button id="first" onclick="changePage('first')" style="display: none;">First</button>
+            <button id="prev" onclick="changePage('prev')" style="display: none;">Previous</button>
             <button id="next" onclick="changePage('next')">Next</button>
           </div>
 
           <script>
             let posts = [];
             let currentPage = 1;
-            const postsPerPage = 5;
+            const postsPerPage = 6;
 
             async function loadBlogPosts() {
               try {
@@ -575,7 +575,8 @@
               postsList.innerHTML = postsToDisplay.join('');
 
               // Update button states
-              document.getElementById('prev').disabled = currentPage === 1;
+              document.getElementById('prev').style.display = currentPage === 1 ? 'none' : 'inline-block';
+              document.getElementById('first').style.display = currentPage === 1 ? 'none' : 'inline-block';
               document.getElementById('next').disabled = end >= posts.length;
             }
 
