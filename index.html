@@ -526,20 +526,27 @@
       <!--
         - #BLOG
       -->
-
       <article class="blog" data-page="blog">
-
         <header>
           <h2 class="h2 article-title">Blog</h2>
         </header>
 
         <section class="blog-posts">
-          
           <ul class="blog-posts-list" id="blog-posts-list">
             <!-- Blog posts will be loaded here -->
           </ul>
 
+          <div class="pagination">
+            <button id="first" onclick="changePage('first')">First</button>
+            <button id="prev" onclick="changePage('prev')">Previous</button>
+            <button id="next" onclick="changePage('next')">Next</button>
+          </div>
+
           <script>
+            let posts = [];
+            let currentPage = 1;
+            const postsPerPage = 5;
+
             async function loadBlogPosts() {
               try {
                 const response = await fetch('blog.html'); // Adjust the path as necessary
@@ -547,17 +554,46 @@
                   throw new Error('Network response was not ok');
                 }
                 const html = await response.text();
-                document.getElementById('blog-posts-list').innerHTML += html; // Append the loaded HTML
+                const tempDiv = document.createElement('div');
+                tempDiv.innerHTML = html;
+
+                // Extract posts from the loaded HTML
+                const postItems = tempDiv.querySelectorAll('.blog-post-item');
+                posts = Array.from(postItems).map(item => item.outerHTML);
+
+                displayPosts();
               } catch (error) {
-                console.error('Error loading post:', error);
+                console.error('Error loading posts:', error);
               }
+            }
+
+            function displayPosts() {
+              const start = (currentPage - 1) * postsPerPage;
+              const end = start + postsPerPage;
+              const postsToDisplay = posts.slice(start, end);
+              const postsList = document.getElementById('blog-posts-list');
+              postsList.innerHTML = postsToDisplay.join('');
+
+              // Update button states
+              document.getElementById('prev').disabled = currentPage === 1;
+              document.getElementById('next').disabled = end >= posts.length;
+            }
+
+            function changePage(action) {
+              if (action === 'next') {
+                currentPage++;
+              } else if (action === 'prev') {
+                currentPage--;
+              } else if (action === 'first') {
+                currentPage = 1;
+              }
+              displayPosts();
             }
 
             // Call the function to load the blog posts
             loadBlogPosts();
           </script>
         </section>
-
       </article>
 
 
