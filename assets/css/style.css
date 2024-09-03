@@ -587,6 +587,7 @@ main {
 /**
  * #testimonials 
  */
+ 
 
 .testimonials { margin-bottom: 30px; }
 
@@ -1104,6 +1105,42 @@ Publications
 }
 
 a{display: table;}
+.image-container {
+  display: block;          /* Change to block to allow centering */
+  text-align: center;     /* Center the content inside the container */
+  margin: 0 auto;         /* Center the container itself if needed */
+}
+
+.large-image {
+  border-radius: 10%;  /* Makes the image circular */
+  width: 70%;             /* Image takes up 70% of the parent container's width */
+  height: auto;           /* Maintains aspect ratio */
+  max-width: 800px;       /* Set a maximum width */
+  min-width: 300px;       /* Optional: Set a minimum width */
+  display: block;          /* Ensures no extra space below the image */
+  margin: 0 auto;         /* Center the image within the container */
+}
+
+.image-caption {
+  color: var(--light-gray); /* Set caption text color */
+  font-size: 1em;          /* Base font size */
+  margin-top: 10px;        /* Space between image and caption */
+  margin-left: 0;          /* Align caption to the left */
+  margin-right: auto;      /* Optional: Center the caption */
+  padding-left: 0;         /* Ensure no padding on the left */
+}
+
+.image-caption strong {
+  color: var(--light-gray); /* Change the color of the strong text */
+  font-weight: bold;        /* Ensure the text is bold */
+}
+
+
+.text-block h2 {
+  color: var(--light-gray); /* Change to your desired color */
+  font-size: 1.5em;        /* Adjust font size */
+  margin-bottom: 10px;     /* Space below the header */
+}
 
 /*-----------------------------------*\
   #BLOG
@@ -1406,7 +1443,6 @@ textarea.form-input::-webkit-resizer { display: none; }
       height: 140px;        /* Set the height to be the same as width for a perfect circle */
       object-fit: cover;   /* Ensures the image covers the container, cropping as needed */
   }
-  
 
   /**
    * #SIDEBAR
