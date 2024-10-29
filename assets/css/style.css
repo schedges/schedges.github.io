@@ -1112,7 +1112,7 @@ a{display: table;}
 }
 
 .large-image {
-  border-radius: 10%;  /* Makes the image circular */
+  border-radius: 15%;  /* Makes the image circular */
   width: 70%;             /* Image takes up 70% of the parent container's width */
   height: auto;           /* Maintains aspect ratio */
   max-width: 800px;       /* Set a maximum width */
@@ -1209,6 +1209,7 @@ a{display: table;}
   width: 4px;
   height: 4px;
   border-radius: 4px;
+  display: none;
 }
 
 .blog-item-title {
