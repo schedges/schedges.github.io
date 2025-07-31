@@ -897,56 +897,40 @@ main {
 /**
 Publications
 */
-.publication-list {
-  color: var(--light-gray);
+/* Publication entry block */
+.pub-entry {
+  margin-bottom: 2em;
   font-size: var(--fs-6);
   font-weight: var(--fw-300);
-  line-height: 1.6;
-  list-style-type: none; /* No default bullets */
-  padding-left: 20px; /* Space for custom bullets */
-  margin: 20px; /* Space around the list */
-}
-
-.publication-item {
-  padding-left: 30px; /* Ensure space for bullets and text */
-  margin-bottom: 10px; /* Space between list items */
-  color: var(--light-gray);
-  font-weight: var(--fw-300);
   line-height: 1.5;
-  position: relative;
-}
-
-.publication-item::before {
-  content: "•"; /* Custom bullet */
   color: var(--light-gray);
-  position: absolute;
-  left: 10px; /* Adjust bullet position */
-  top: 50%;
-  transform: translateY(-50%);
 }
 
-.publication-item a {
-  color: var(--orange-yellow-crayola); /* Optional: Set link color */
-  text-decoration: underline; /* Optional: Ensure links are visible */
-  display: inline;  
+.pub-entry p {
+  margin: 0.3em 0;
 }
 
-.publication-text {
-  color: var(--light-gray);
-  font-weight: var(--fw-300);
-  line-height: 1.5;
-  margin-left: 0; /* No extra margin needed */
+/* Title styling — big, bold, not a link */
+.pub-entry .pub-title {
+  font-weight: var(--fw-600);
+  font-size: calc(var(--fs-6) * 1.);
+  color: var(--white-1);
+  margin-bottom: 0.2em;
 }
 
-/* Responsive adjustments */
-@media (max-width: 600px) {
-  .publication-item {
-    padding-left: 20px; /* Reduce padding on smaller screens */
-  }
-  
-  .publication-item::before {
-    left: 5px; /* Adjust bullet position on smaller screens */
-  }
+/* Link styling */
+.pub-entry a,
+.pub-entry a:visited {
+  color: var(--orange-yellow-crayola);
+  text-decoration: underline;
+  display: inline;
+}
+
+.pub-divider {
+  border: none;
+  border-top: 1px solid var(--white-1);
+  margin: 0.5em 0 1em 0;
+  opacity: 0.2;
 }
 
 /*-----------------------------------*\
