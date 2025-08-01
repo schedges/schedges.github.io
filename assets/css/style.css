@@ -535,6 +535,12 @@ main {
 .about-text a { display: inline; }
 
 
+.about-divider {
+  border: none;
+  border-top: 1px solid var(--white-1);
+  margin: 0.5em 0 1em 0;
+  opacity: 0.4;
+}
 
 /**
  * #service 
@@ -930,7 +936,7 @@ Publications
   border: none;
   border-top: 1px solid var(--white-1);
   margin: 0.5em 0 1em 0;
-  opacity: 0.2;
+  opacity: 0.4;
 }
 
 /*-----------------------------------*\
@@ -1999,5 +2005,30 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .timeline-text { max-width: 700px; }
     
+
+  /**
+  * RESEARCH
+  */
+  .research-list {
+  list-style-type: disc !important;
+  list-style-position: outside;
+  padding-left: 1.5em;
+  margin: 1em 0;
+  }
+  .research-list li {
+  list-style-type: disc !important;   /* overrides global 'block' */
+  display: list-item;
+  margin-bottom: 0.8em;
+  font-size: var(--fs-6);
+  line-height: 1.5;
+  color: var(--light-gray);
+  }
+
+
+  .research-list a {
+    display: inline;              /* overrides global 'block' */
+    color: var(--orange-yellow-crayola);
+    text-decoration: underline;
+  }
 
 }
