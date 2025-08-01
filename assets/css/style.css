@@ -2029,4 +2029,25 @@ textarea.form-input::-webkit-resizer { display: none; }
     color: var(--orange-yellow-crayola) !important;  /* force override on mobile Safari */
     text-decoration: underline;
   }
+  article[data-page="research"] ul.research-list {
+    list-style-type: disc !important;
+    list-style-position: outside !important;
+    padding-left: 1.5em;
+    margin: 1em 0;
+  }
+
+  article[data-page="research"] ul.research-list li {
+    display: list-item !important;
+    list-style-type: disc !important;
+    font-size: var(--fs-6);
+    line-height: 1.5;
+    color: var(--light-gray);
+  }
+
+  article[data-page="research"] ul.research-list a {
+    display: inline !important;
+    color: var(--orange-yellow-crayola) !important;
+    text-decoration: underline;
+  }
+
 }
