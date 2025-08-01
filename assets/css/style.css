@@ -2011,43 +2011,28 @@ textarea.form-input::-webkit-resizer { display: none; }
   * RESEARCH
   */
   .research-list {
-    list-style: disc outside !important;
-    padding-left: 1.5em;
-    margin: 1em 0;
-  }
-  .research-list li {
-    display: list-item !important;               /* mobile needs this */
-    list-style-type: disc !important;            /* just in case */
-    margin-bottom: 0.8em;
-    font-size: var(--fs-6);
-    line-height: 1.5;
-    color: var(--light-gray);
-  }
-  .research-list a,
-  .research-list a:visited  {
-    display: inline;
-    color: var(--orange-yellow-crayola) !important;  /* force override on mobile Safari */
-    text-decoration: underline;
-  }
-  article[data-page="research"] ul.research-list {
-    list-style-type: disc !important;
-    list-style-position: outside !important;
-    padding-left: 1.5em;
-    margin: 1em 0;
-  }
+  all: revert;
+  list-style-type: disc;
+  list-style-position: outside;
+  padding-left: 1.5em;
+  margin: 1em 0;
+}
 
-  article[data-page="research"] ul.research-list li {
-    display: list-item !important;
-    list-style-type: disc !important;
-    font-size: var(--fs-6);
-    line-height: 1.5;
-    color: var(--light-gray);
-  }
+.research-list li {
+  all: revert;
+  list-style-type: disc;
+  display: list-item;
+  margin-bottom: 0.8em;
+  font-size: var(--fs-6);
+  line-height: 1.5;
+  color: var(--light-gray);
+}
 
-  article[data-page="research"] ul.research-list a {
-    display: inline !important;
-    color: var(--orange-yellow-crayola) !important;
-    text-decoration: underline;
-  }
+.research-list a {
+  all: revert;
+  display: inline;
+  color: var(--orange-yellow-crayola);
+  text-decoration: underline;
+}
 
 }
