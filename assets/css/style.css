@@ -817,7 +817,8 @@ main {
 
 .timeline-list {
   font-size: var(--fs-6);
-  margin-left: 45px;
+  margin-left: 2em;  /* Changed from 45px to match bullet */
+  position: relative;
 }
 
 .timeline-item { position: relative; 
@@ -840,13 +841,13 @@ main {
 .timeline-item::after {
   content: "";
   position: absolute;
-  top: 20px;
-  left: -33px;
-  height: 6px;
-  width: 6px;
+  top: 0.6em;              /* Aligns to first line regardless of font size */
+  left: -1.5em;            /* Match your margin-left in .timeline-list */
+  height: 0.5em;
+  width: 0.5em;
   background: var(--text-gradient-yellow);
   border-radius: 50%;
-  box-shadow: 0 0 0 4px var(--jet);
+  box-shadow: 0 0 0 3px var(--jet);  /* Shrink outline to fit smaller bullet */
 }
 
 .timeline-text {
@@ -2010,25 +2011,22 @@ textarea.form-input::-webkit-resizer { display: none; }
   * RESEARCH
   */
   .research-list {
-  list-style-type: disc !important;
-  list-style-position: outside;
-  padding-left: 1.5em;
-  margin: 1em 0;
+    list-style: disc outside !important;
+    padding-left: 1.5em;
+    margin: 1em 0;
   }
   .research-list li {
-  list-style-type: disc !important;   /* overrides global 'block' */
-  display: list-item;
-  margin-bottom: 0.8em;
-  font-size: var(--fs-6);
-  line-height: 1.5;
-  color: var(--light-gray);
+    display: list-item !important;               /* mobile needs this */
+    list-style-type: disc !important;            /* just in case */
+    margin-bottom: 0.8em;
+    font-size: var(--fs-6);
+    line-height: 1.5;
+    color: var(--light-gray);
   }
-
-
-  .research-list a {
-    display: inline;              /* overrides global 'block' */
-    color: var(--orange-yellow-crayola);
+  .research-list a,
+  .research-list a:visited  {
+    display: inline;
+    color: var(--orange-yellow-crayola) !important;  /* force override on mobile Safari */
     text-decoration: underline;
   }
-
 }
